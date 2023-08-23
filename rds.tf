@@ -16,5 +16,5 @@ resource "aws_db_subnet_group" "default" {
   username             = "username"
   password             = "password"
   skip_final_snapshot  = true
-  vpc_security_group_ids = [aws_security_group.databasesg.id]
+  vpc_security_group_ids = [aws_security_group.database_sg.id]
 }
