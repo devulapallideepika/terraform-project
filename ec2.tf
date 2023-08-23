@@ -4,7 +4,7 @@ resource "aws_instance" "web_1" {
     instance_type = "t2.micro"
     key_name = "deepika"
     vpc_security_group_ids = [aws_security_group.wsg.id]
-    subnet_id = aws_subnet.pub-sub-1.id
+    subnet_id = aws_subnet.pub-subnet-1.id
     associate_public_ip_address = true
     user_data = "${file("userdata.sh")}"
 
@@ -20,7 +20,7 @@ resource "aws_instance" "web_2" {
     instance_type = "t2.micro"
     key_name = "deepika"
     vpc_security_group_ids = [aws_security_group.wsg.id]
-    subnet_id = aws_subnet.pub-sub-2.id
+    subnet_id = aws_subnet.pub-subnet-2.id
     associate_public_ip_address = true
     user_data = "${file("userdata.sh")}"
 
